@@ -6,6 +6,11 @@ tools{
 maven "maven3.8.5"
 }
 
+triggers {
+  pollSCM ('* * * * *')
+}
+
+
 stages{
 
 //Get the code from GitHub
