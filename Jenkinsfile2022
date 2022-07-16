@@ -58,7 +58,7 @@ slacknotifications("currentBuild.result")
 
 def slacknotifications(String buildStatus = 'STARTED') {
   
-  buildStatus =  buildStatus ?: 'SUCCESSFUL'
+  buildStatus =  buildStatus ?: 'SUCCESS'
 
   // Default values
   def colorName = 'RED'
