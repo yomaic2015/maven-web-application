@@ -7,7 +7,14 @@ maven "maven3.8.5"
 }
 
 triggers {
-  pollSCM ('* * * * *')
+  pollSCM('* * * * *')
+   //cron('* * * * *')
+}
+
+options {
+  timestamps()
+  buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')
+  }
 }
 
 
